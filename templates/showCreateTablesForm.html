@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<h1>Create Tables Form:</h1>
+<form method="POST" action="/createTablesForm" enctype="multipart/form-data">
+    <br>
+    <label>Table ID Number:</label><br>
+    <input type="text"  name="tableId" placeholder="Enter Table ID Number here">
+    <br><br>
+    <label>Table Name:</label><br>
+    <input type="text"  name="tableName" placeholder="Enter Table Name here">
+    <br><br>
+    <label>Description:</label><br>
+    <input type="text"  name="description" placeholder="Enter Description here">
+    <br><br>
+    <label>Id Number:</label><br>
+    <select name="idNo" id="idNo">
+        {% for i in IdNoResult %}
+            <option value={{i[0]}}>{{i[0]}},{{i[1]}}</option>
+        {% endfor %}
+    </select>
+
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}

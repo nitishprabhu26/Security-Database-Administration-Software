@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+	<table class="table table-striped table-bordered table-hover table-condensed">
+		<tr>
+			<th>Label</th>
+			<th>Value</th>
+		</tr>
+    {% for text in text_list %}
+    <tr>
+    	<td>{{ text.label }}</td>
+    	<td>{{ text.value }}</td>
+    </tr>
+    {% endfor %}
+	</table>
+{% endblock %}

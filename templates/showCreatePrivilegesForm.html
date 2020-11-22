@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<h1>Create Privileges Form:</h1>
+<form method="POST" action="/createPrivilegesForm" enctype="multipart/form-data">
+    <br>
+    <label>Privilege ID Number:</label><br>
+    <input type="text"  name="privilegeID" placeholder="Enter Privilege ID Number here">
+    <br><br>
+    <label>Privilege Type:</label><br>
+    <input type="text"  name="privilegeType" placeholder="Enter Privilege Type here">
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}

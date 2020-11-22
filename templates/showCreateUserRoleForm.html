@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<h1>Create User Form:</h1>
+<form method="POST" action="/createUserRoleForm" enctype="multipart/form-data">
+    <br>
+    <label>Role ID Number:</label><br>
+    <input type="text"  name="roleIdNo" placeholder="Enter Role ID Number here">
+    <br><br>
+    <label>Role Name:</label><br>
+    <input type="text"  name="roleName" placeholder="Enter Role Name here">
+    <br><br>
+    <label>Description:</label><br>
+    <input type="text"  name="description" placeholder="Enter Description here">
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}

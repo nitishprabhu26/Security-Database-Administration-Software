@@ -1,0 +1,16 @@
+Flask>=1.0.0
+gunicorn==19.7.1
+prometheus-client
+ibmcloudenv
+livereload
+Flask-WTF
+flask-uploads
+tinydb
+flask-bootstrap
+flask-nav
+werkzeug==0.16.1
+ibm_db
+sqlalchemy
+ibm_db_sa
+pandas
+pymysql

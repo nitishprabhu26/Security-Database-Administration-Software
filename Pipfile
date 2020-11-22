@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+gunicorn = "==19.7.1"
+ibmcloudenv = "*"
+livereload = "*"
+tinydb = "*"
+flask-nav = "*"
+ibm-db = "*"
+Flask = ">=1.0.0"
+prometheus_client = "*"
+Flask-WTF = "*"
+Flask-Uploads = "*"
+Flask-Bootstrap = "*"
+Werkzeug = "==0.16.1"
+
+[requires]
+python_version = "3.8"

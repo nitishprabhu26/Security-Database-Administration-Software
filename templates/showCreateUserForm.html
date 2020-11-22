@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<h1>Create User Form:</h1>
+<form method="POST" action="/createUserForm" enctype="multipart/form-data">
+    <br>
+    <label>User Account ID Number:</label><br>
+    <input type="text"  name="idNo" placeholder="Enter ID Number here">
+    <br><br>
+    <label>User Name:</label><br>
+    <input type="text"  name="userName" placeholder="Enter User Name here">
+    <br><br>
+    <label>Birth Date:</label><br>
+    <input type="text"  name="birthDate" placeholder="Enter Birth Date here">
+    <br><br>
+    <label>Address:</label><br>
+    <input type="text"  name="address" placeholder="Enter Address here">
+    <br><br>
+    <label>Sex:</label><br>
+    <input type="text"  name="sex" placeholder="Enter Sex here">
+    <br><br>
+    <label>Phone Number:</label><br>
+    <input type="text"  name="phoneNo" placeholder="Enter Phone Number here">
+    <br><br>
+    <label>Role Id:</label><br>
+    <select name="roleIdNo" id="roleIdNo">
+        {% for i in roleIdNoResult %}
+            <option value={{i[0]}}>{{i[1]}}</option>
+        {% endfor %}
+    </select>
+
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}

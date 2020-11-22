@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+    <label>USER ACCOUNTS TABLE:</label>
+
+    <table style="width:100%; text-align: center;">
+        <tr>
+          <th>ID Number</th>
+          <th>Name</th>
+          <th>Birth Date</th>
+          <th>Address</th>
+          <th>Sex</th>
+          <th>Phone</th>
+          <th>Role ID</th>
+        </tr>
+
+        {% for i in userAccountResult %}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+            <td>{{i[5]}}</td>
+            <td>{{i[6]}}</td>
+          </tr>
+        {% endfor %}
+
+      </table>
+
+
+      <br>
+      <label>USER ROLE TABLE:</label>
+
+      <table style="width:100%; text-align: center;">
+          <tr>
+            <th>Role ID</th>
+            <th>Role Name</th>
+            <th>Role Description</th>
+          </tr>
+  
+          {% for i in userRoleResult %}
+          <tr>
+              <td>{{i[0]}}</td>
+              <td>{{i[1]}}</td>
+              <td>{{i[2]}}</td>
+            </tr>
+          {% endfor %}
+  
+        </table>
+
+        
+      <br>
+      <label>PRIVILEGE TABLE:</label>
+
+      <table style="width:100%; text-align: center;">
+          <tr>
+            <th>Privilege ID</th>
+            <th>Privilege Type</th>
+          </tr>
+  
+          {% for i in privilegeResult %}
+          <tr>
+              <td>{{i[0]}}</td>
+              <td>{{i[1]}}</td>
+            </tr>
+          {% endfor %}
+  
+        </table>
+
+        <br>
+      <label>ACCOUNT PRIVILEGE TABLE:</label>
+
+      <table style="width:100%; text-align: center;">
+          <tr>
+            <th>Account ID</th>
+            <th>Account Functionality Name</th>
+            <th>Account Functionality Description</th>
+            <th>Role ID</th>
+            <th>Privilege ID</th>
+          </tr>
+  
+          {% for i in accountPrivilegeResult %}
+          <tr>
+              <td>{{i[0]}}</td>
+              <td>{{i[1]}}</td>
+              <td>{{i[2]}}</td>
+              <td>{{i[3]}}</td>
+              <td>{{i[4]}}</td>
+            </tr>
+          {% endfor %}
+  
+        </table>
+        
+        <br>
+      <label>RELATION PRIVILEGE TABLE:</label>
+
+      <table style="width:100%; text-align: center;">
+          <tr>
+            <th>Relation ID</th>
+            <th>Relation Functionality Name</th>
+            <th>Relation Functionality Description</th>
+            <th>Role ID</th>
+            <th>Privilege ID</th>
+          </tr>
+  
+          {% for i in relationPrivilegeResult %}
+          <tr>
+              <td>{{i[0]}}</td>
+              <td>{{i[1]}}</td>
+              <td>{{i[2]}}</td>
+              <td>{{i[3]}}</td>
+              <td>{{i[4]}}</td>
+            </tr>
+          {% endfor %}
+  
+        </table>
+
+
+        <br>
+        <label>TABLES TABLE:</label>
+  
+        <table style="width:100%; text-align: center;">
+            <tr>
+              <th>Table ID</th>
+              <th>Table Name</th>
+              <th>Description</th>
+              <th>ID Number</th>
+            </tr>
+    
+            {% for i in tablesResult %}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+              </tr>
+            {% endfor %}
+    
+          </table>
+
+
+
+          <br>
+          <label>HAS_ON TABLE:</label>
+    
+          <table style="width:100%; text-align: center;">
+              <tr>
+                <th>Table ID</th>
+                <th>Role ID</th>
+                <th>Relation ID</th>
+                <th>Privilege ID</th>
+                <th>Description</th>
+              </tr>
+      
+              {% for i in has_on_Result %}
+              <tr>
+                  <td>{{i[0]}}</td>
+                  <td>{{i[1]}}</td>
+                  <td>{{i[2]}}</td>
+                  <td>{{i[3]}}</td>
+                  <td>{{i[4]}}</td>
+                </tr>
+              {% endfor %}
+      
+            </table>
+
+            <div style="margin: 50px;"></div>
+{% endblock %}
+
