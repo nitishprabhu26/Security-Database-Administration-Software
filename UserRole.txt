@@ -1,0 +1,6 @@
+ "1","db_owner","Owner of the Schema, Can perform any operation on any schema"
+"2","db_admin","Provide privelages to users"
+"3","db_ddl","Can perform basic operations on the schema"
+"4","db_analyst","Can only read from a particular schema"
+"5","db_banker","Can perform read, write or append from a particular schema"
+"6","db_user","Can perform task based on the previlage that is provided by dd_admin"

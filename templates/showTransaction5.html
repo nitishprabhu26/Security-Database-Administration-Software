@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+
+<h1>Transaction 5: User Account relates to ROLE:</h1>
+<form method="POST" action="/transaction5form" enctype="multipart/form-data">
+    <br>
+    <label>ID Number:</label><br>
+    <input type="text"  name="IdNo" placeholder="Enter ID Number here">
+    <br><br>
+    <label>Role ID Number:</label><br>
+    <input type="text"  name="roleIdNo" placeholder="Enter Role ID Number here">
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}

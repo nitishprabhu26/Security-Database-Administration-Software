@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+
+<h1>Transaction 8b: USER PRVILIGES:</h1>
+<form method="POST" action="/transaction8formAccount" enctype="multipart/form-data">
+    <br>
+    <label>Account ID Number:</label><br>
+    <input type="text"  name="accountIdNo" placeholder="Enter Account ID Number here">
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<label>Account privileges</label>
+    {% if result1 %}
+        {% for i in result1 %}
+            <p>{{i[0]}}</p>
+        {% endfor %}
+    {% else %}
+        <p>No Account privileges assigned</p>
+    {% endif %}
+
+    <label>Relational privileges</label>
+    {% if result2 %}
+        {% for i in result2 %}
+            <p>{{i[0]}}</p>
+        {% endfor %}
+    {% else %}
+        <p>No Account privileges assigned</p>
+    {% endif %}
+
+{% endblock %}

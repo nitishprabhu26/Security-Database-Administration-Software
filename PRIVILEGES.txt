@@ -1,0 +1,2 @@
+"P01", "Account_Privilege"
+"P02", "Relational_Privilege"

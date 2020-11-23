@@ -1,0 +1,6 @@
+"R101", "Read", "Can Read from  A schema","4", "P02"
+"R102", "Read", "Can Read from  A schema","5", "P02"
+"R103", "Write", "Can write into  A schema","5", "P02"
+"R104", "Append", "Can append into  A schema","5", "P02"
+"R105", "Read", "Can Read from  A schema","6", "P02"
+"R106", "Write", "Can write into  A schema","6", "P02"

@@ -2,15 +2,34 @@
 
 {% block app_content %}
 
-<h1>Create Privileges Form:</h1>
+<h1>Add Privileges Form:</h1>
 <form method="POST" action="/createPrivilegesForm" enctype="multipart/form-data">
     <br>
-    <label>Privilege ID Number:</label><br>
-    <input type="text"  name="privilegeID" placeholder="Enter Privilege ID Number here">
+    <label>Select Privilege Type:</label><br>
+    <select name="privilegeType" id="privilegeType">
+        <option value="Account_Privilege_Type">Account Privilege Type</option>
+        <option value="Relation_Privilege_Type">Relation Privilege Type</option>
+    </select>
     <br><br>
-    <label>Privilege Type:</label><br>
-    <input type="text"  name="privilegeType" placeholder="Enter Privilege Type here">
+    <label>ID Number:</label><br>
+    <input type="text"  name="IdNo" placeholder="Enter ID Number here">
     <br><br>
+    <label>Functionality Name:</label><br>
+    <input type="text"  name="functionalityName" placeholder="Enter Functionality Name here">
+    <br><br>
+    <label>Functionality Description:</label><br>
+    <input type="text"  name="functionalityDescription" placeholder="Enter Functionality Description here">
+    <br><br>
+    <label>Role ID Number:</label><br>
+    <input type="text"  name="roleIdNumber" placeholder="Enter Role ID Number here">
+    <br><br>
+    <label>Select Privilege ID Number:</label><br>
+    <select name="privilegeIdNumber" id="privilegeIdNumber">
+        <option value="P01">P01</option>
+        <option value="P02">P02</option>
+    </select>
+    <br><br>
+
     <button type="submit">Submit</button>
 </form>
 

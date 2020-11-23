@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+
+<h1>Transaction 6: Account Privilege relates to ROLE:</h1>
+<form method="POST" action="/transaction6form" enctype="multipart/form-data">
+    <br>
+    <label>Account ID Number:</label><br>
+    <input type="text"  name="accountIdNo" placeholder="Enter Account ID Number here">
+    <br><br>
+    <label>Role ID Number:</label><br>
+    <input type="text"  name="roleIdNo" placeholder="Enter Role ID Number here">
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}

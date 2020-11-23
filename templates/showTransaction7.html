@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+
+<h1>Transaction 7: Relational Privilege relates to ROLE,TABLE:</h1>
+<form method="POST" action="/transaction7form" enctype="multipart/form-data">
+    <br>
+    <label>Table ID Number:</label><br>
+    <input type="text"  name="tableIdNo" placeholder="Enter Table ID Number here">
+    <br><br>
+    <label>Role ID Number:</label><br>
+    <input type="text"  name="roleIdNo" placeholder="Enter Role ID Number here">
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+{% if result1 %}
+    {% for i in result1 %}
+        <p>{{i[0]}}</p>
+    {% endfor %}
+{% endif %}
+
+{% endblock %}
